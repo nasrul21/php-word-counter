@@ -1,0 +1,19 @@
+{
+    "name": "nasrulfaizin/php-word-counter",
+    "description": "Generate number of word",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nasrul Faizin",
+            "email": "faizinnasrul21@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "WordCounter\\" : "WordCounter/"
+        }
+    }
+}
