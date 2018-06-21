@@ -6,6 +6,7 @@ class Base {
     protected $result;
     protected $sortBy;
     protected $desc;
+    protected $limit;
     protected $minLen;
 
     public function __construct()
@@ -14,6 +15,7 @@ class Base {
         $this->result = [];
         $this->sortBy = "number:desc";
         $this->desc = true;
+        $this->limit = 100;
         $this->minLen = 2;
     }
 
@@ -28,6 +30,10 @@ class Base {
 
     public function sortByWord($order = "asc") {
         $this->sortBy = "word:{$order}";
+    }
+
+    public function setLimit($limit) {
+        $this->limit = $limit;
     }
 
     public function setminLen($minLen) {

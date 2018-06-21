@@ -54,7 +54,7 @@ class WordCounter extends Base {
             }, ARRAY_FILTER_USE_KEY);
         }
 
-        return $this->result;
+        return array_slice($this->result, 0, $this->limit);
     }
 
 }
