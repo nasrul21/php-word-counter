@@ -32,11 +32,11 @@ class Base {
         $this->sortBy = "word:{$order}";
     }
 
-    public function setLimit($limit) {
+    public function limit($limit) {
         $this->limit = $limit;
     }
 
-    public function setminLen($minLen) {
+    public function minLen($minLen) {
         $this->minLen = $minLen;
     }
 }
