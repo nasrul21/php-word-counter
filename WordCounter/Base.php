@@ -8,15 +8,9 @@ class Base {
     protected $desc;
     protected $limit;
     protected $minLen;
+    protected $skipWords;
 
-    public function __construct()
-    {
-        $this->text = "";
-        $this->result = [];
-        $this->sortBy = "number:desc";
-        $this->desc = true;
-        $this->limit = 100;
-        $this->minLen = 2;
+    public function __construct() {
     }
 
     public function setText($string)
@@ -38,5 +32,10 @@ class Base {
 
     public function minLen($minLen) {
         $this->minLen = $minLen;
+    }
+
+    public function skipWords($words)
+    {
+        $this->skipWords = $words;
     }
 }

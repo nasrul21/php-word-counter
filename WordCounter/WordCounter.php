@@ -8,6 +8,12 @@ class WordCounter extends Base {
     public function __construct($text)
     {
         $this->text = $text;
+        $this->result = [];
+        $this->sortBy = "number:desc";
+        $this->desc = true;
+        $this->limit = 100;
+        $this->minLen = 2;
+        $this->skipWords = [];
     }
 
     protected function splitText() {
@@ -53,6 +59,10 @@ class WordCounter extends Base {
                 return strlen($key) >= $this->minLen;
             }, ARRAY_FILTER_USE_KEY);
         }
+
+        $skipWords = array_fill_keys($this->skipWords, 0);
+
+        $this->result = array_diff_key($this->result, $skipWords);
 
         return array_slice($this->result, 0, $this->limit);
     }
